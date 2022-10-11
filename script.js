@@ -30,5 +30,12 @@ const getWeather = () => {
   });
 };
 
-getWeather();
+const enterKeyCheck = (e) => {
+  if (e.key === "Enter") {
+    getWeather();
+  }
+};
+
 button.addEventListener("click", getWeather);
+input.addEventListener("keyup", enterKeyCheck);
+getWeather();
